@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C0B7B7;
+    padding: 20px;
+}
+
+#wordBox {
+    height: 70vh;
+    aspect-ratio: 0.6;
+    perspective: 1000px;
+    perspective-origin: center 50%;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    padding: 30px 0px 0px 20px;
+    overflow: hidden;
+    background-color: #F8F5E3;
+    transform: translateZ(calc(-1px * var(--i)))
+    translateY(calc(7px * var(--i))) translateX(calc(2px * var(--i)));
+    filter: drop-shadow(2px 2px 20px rgba(0,0,0,0.3));
+}
+
+.word-information {
+    font-size: 20px;
+}
+
+.text-indent {
+    margin-left: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.drop-box {
+    background-color: #F8F5E3;
+    position: relative;
+    z-index: 1;
+    right: 20%;
+    width: 20%;
+    height: 60%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3));
+}
+
+.drop-box-right {
+    background-color: #F8F5E3;
+    position: relative;
+    z-index: 1;
+    left: 20%;
+    width: 20%;
+    height: 60%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3));
+}
+
+#scoreboard {
+    background-color: #F8F5E1;
+    border-radius: 20px;
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    z-index: 2;
+    bottom: 88%;
+    left: 78%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3));
+    font-size: 30px;
+}
+
+#life {
+    visibility: hidden;
+}
+
+#live-crosses {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    z-index: 2;
+    bottom: 88%;
+    right: 78%;
+    font-size: 50px;
+    color: red;
+}
+
+#mxStk {
+    visibility: hidden;
+}
